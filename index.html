@@ -11,134 +11,176 @@
 <body>
 <main class="app-shell">
 
-<section class="screen active" id="screen-top">
-  <div class="hero-card">
-    <img class="hero-banner" src="hero-banner.png" alt="「顧客継続力」3分診断シート｜あなたの会社は、なぜ顧客が離れる？" />
-    <div class="eyebrow">CUSTOMER RETENTION DIAGNOSTIC</div>
-    <div class="pill">約3分｜全10問｜無料</div>
-    <h1>「顧客継続力」<br><span>3分診断シート</span></h1>
-    <h2>あなたの会社は、<br><strong>なぜ顧客が離れる？</strong></h2>
-    <p>顧客が長く付き合ってくれる会社と、<br>一度購入したら関係が終わってしまう会社。<br><br>その違いは、営業力やフォロー回数だけではありません。</p>
-    <div class="message-box">「次もあなたに相談したくなる仕組み」が、<br>事業そのものに組み込まれているか。</div>
-    <p class="small-copy">5つの経営視点・全10問から、あなたの会社の「顧客継続力」を診断します。</p>
-    <button class="primary-btn" data-next="screen-about">3分診断をはじめる</button>
-  </div>
-</section>
+  <section class="screen active" id="screen-top">
+    <div class="hero-card">
+      <img class="hero-banner" src="hero-banner.png" alt="『顧客継続力』3分診断シート｜あなたの会社は、なぜ顧客が離れる？" />
 
-<section class="screen" id="screen-about">
-  <div class="content-card">
-    <div class="eyebrow">ABOUT THIS DIAGNOSIS</div>
-    <h2>顧客継続力を左右する、<br>5つの経営ポイント</h2>
-    <p class="intro-copy">10問版では、5つの経営視点をそれぞれ2問ずつ確認します。<br>5問版より少し詳しく、現在の状態を整理できる設計です。</p>
-    <div class="axis-list">
-      <div class="axis-item"><span>01</span><div><b>継続設計力</b><small>商品・サービス提供後にも「次に相談する理由」があるか</small></div></div>
-      <div class="axis-item"><span>02</span><div><b>顧客理解力</b><small>目の前の悩みだけでなく、その先の目標まで理解できているか</small></div></div>
-      <div class="axis-item"><span>03</span><div><b>価値拡張力</b><small>自社の商品だけに限定せず、顧客の選択肢を広げられるか</small></div></div>
-      <div class="axis-item"><span>04</span><div><b>関係拡張力</b><small>顧客との関係が、本人だけで終わらず広がっていくか</small></div></div>
-      <div class="axis-item"><span>05</span><div><b>顧問ポジション力</b><small>「商品について」ではなく「まずあなたに相談したい」と思われているか</small></div></div>
-    </div>
-    <div class="note">正解・不正解はありません。<br>「理想ではこうしたい」ではなく、<strong>現在の会社の状態に最も近い回答</strong>を直感でお選びください。</div>
-    <button class="primary-btn" data-start>診断をスタートする</button>
-  </div>
-</section>
+      <div class="hero-body">
+        <div class="eyebrow">CUSTOMER RETENTION DIAGNOSTIC</div>
+        <div class="pill">約3分 ｜ 全10問 ｜ 無料</div>
 
-<section class="screen" id="screen-question">
-  <div class="question-card">
-    <div class="progress-row">
-      <span id="q-counter">QUESTION 01 / 10</span>
-      <span id="q-axis">継続設計力</span>
-    </div>
-    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
-    <h2 id="q-title"></h2>
-    <p id="q-help"></p>
-    <div class="answers">
-      <button data-score="4">できている</button>
-      <button data-score="3">ある程度できている</button>
-      <button data-score="1">あまりできていない</button>
-      <button data-score="0">できていない</button>
-    </div>
-  </div>
-</section>
+        <h1>「顧客継続力」<span>3分診断シート</span></h1>
+        <h2>あなたの会社は、<strong>なぜ顧客が離れる？</strong></h2>
 
-<section class="screen" id="screen-analyzing">
-  <div class="content-card center">
-    <div class="loader"></div>
-    <div class="eyebrow">ANALYZING</div>
-    <h2>あなたの顧客継続力を<br>分析しています…</h2>
-    <p>10の回答を、5つの経営視点に分けて確認しています。</p>
-    <div class="analysis-list" id="analysis-list">
-      <div>継続設計力</div>
-      <div>顧客理解力</div>
-      <div>価値拡張力</div>
-      <div>関係拡張力</div>
-      <div>顧問ポジション力</div>
-    </div>
-  </div>
-</section>
+        <p class="lead-copy">
+          顧客が長く付き合ってくれる会社と、<br class="pc-only">
+          一度購入したら関係が終わってしまう会社。
+        </p>
 
-<section class="screen" id="screen-result">
-  <div class="result-wrap">
-    <div class="result-hero">
-      <div class="eyebrow">DIAGNOSIS RESULT</div>
-      <p class="result-intro">あなたの会社の顧客継続タイプは…</p>
-      <div class="level" id="result-level"></div>
-      <h1 id="result-type"></h1>
-      <div class="score-box">
-        <span>顧客継続力スコア</span>
-        <strong><span id="result-score"></span> / 40</strong>
+        <div class="message-box">
+          違いは、フォロー回数ではありません。<br>
+          <strong>「次もあなたに相談したくなる仕組み」</strong>があるかどうかです。
+        </div>
+
+        <p class="small-copy">5つの経営視点から、いまの「顧客継続力」を整理します。</p>
+        <button class="primary-btn" data-next="screen-about">3分診断をはじめる</button>
       </div>
     </div>
+  </section>
 
-    <div class="content-card">
-      <h3>5つの経営指標</h3>
-      <p class="chart-note">各指標は2問の合計で、8点満点です。</p>
-      <div class="radar-wrap">
-        <svg id="radar" viewBox="0 0 360 320" role="img" aria-label="5つの経営指標レーダーチャート"></svg>
+  <section class="screen" id="screen-about">
+    <div class="content-card about-card">
+      <div class="eyebrow">ABOUT THIS DIAGNOSIS</div>
+      <h2>顧客継続力を左右する、<br><strong>5つの経営ポイント</strong></h2>
+      <p class="intro-copy">全10問。5つの視点を2問ずつ確認し、現在地を整理します。</p>
+
+      <div class="axis-list">
+        <div class="axis-item"><span>01</span><div><b>継続設計力</b><small>提供後にも「次に相談する理由」があるか</small></div></div>
+        <div class="axis-item"><span>02</span><div><b>顧客理解力</b><small>目の前の悩みだけでなく、その先まで理解できているか</small></div></div>
+        <div class="axis-item"><span>03</span><div><b>価値拡張力</b><small>自社の商品だけに限定せず、選択肢を広げられるか</small></div></div>
+        <div class="axis-item"><span>04</span><div><b>関係拡張力</b><small>顧客との関係が、本人だけで終わらず広がっていくか</small></div></div>
+        <div class="axis-item"><span>05</span><div><b>顧問ポジション力</b><small>「まずあなたに相談したい」と思われているか</small></div></div>
       </div>
-      <div id="axis-scores" class="axis-scores"></div>
-    </div>
 
-    <div class="content-card result-copy">
-      <div class="why-label">あなたの会社は、なぜ顧客が離れる？</div>
-      <h2 id="why-title"></h2>
-      <div id="result-body"></div>
-    </div>
+      <div class="note">
+        <span class="note-label">回答のポイント</span>
+        「理想ではこうしたい」ではなく、<br>
+        <strong>現在の会社の状態に最も近い回答</strong>を直感でお選びください。
+      </div>
 
-    <div class="content-card">
-      <h3>あなたの伸びしろ</h3>
-      <div id="growth-copy"></div>
-      <div class="first-step">
-        <span>まず取り組むこと</span>
-        <strong id="first-step"></strong>
+      <button class="primary-btn" data-start>診断をスタートする</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-question">
+    <div class="question-card">
+      <div class="progress-row">
+        <span id="q-counter">QUESTION 01 / 10</span>
+        <span id="q-axis">継続設計力</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <div class="question-label">QUESTION</div>
+      <h2 id="q-title"></h2>
+
+      <div class="help-box">
+        <span>考えるヒント</span>
+        <p id="q-help"></p>
+      </div>
+
+      <div class="answers" aria-label="回答を選択">
+        <button data-score="4"><span class="answer-mark">A</span><span>できている</span></button>
+        <button data-score="3"><span class="answer-mark">B</span><span>ある程度できている</span></button>
+        <button data-score="1"><span class="answer-mark">C</span><span>あまりできていない</span></button>
+        <button data-score="0"><span class="answer-mark">D</span><span>できていない</span></button>
+      </div>
+
+      <p class="answer-note">深く考えすぎず、今の状態に最も近いものをお選びください。</p>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-analyzing">
+    <div class="content-card center analyzing-card">
+      <div class="loader"></div>
+      <div class="eyebrow">ANALYZING</div>
+      <h2>あなたの顧客継続力を<br>分析しています…</h2>
+      <p>10の回答を、5つの経営視点に分けて確認しています。</p>
+      <div class="analysis-list" id="analysis-list">
+        <div>継続設計力</div>
+        <div>顧客理解力</div>
+        <div>価値拡張力</div>
+        <div>関係拡張力</div>
+        <div>顧問ポジション力</div>
       </div>
     </div>
+  </section>
 
-    <div class="content-card common-message">
-      <h2>新規顧客を探す前に、<br>今いる顧客を見てみてください。</h2>
-      <p>あなたの会社には、すでに<br><strong>あなたを信頼してくれているお客様</strong><br>という大きな資産があります。</p>
-      <p>その関係を、<br><strong>「売って終わり」から<br>「困ったときに相談される関係」へ。</strong></p>
-      <div class="closing-copy">売る会社から、<br>顧問として選ばれる会社へ。</div>
+  <section class="screen" id="screen-result">
+    <div class="result-wrap">
+      <div class="result-hero">
+        <div class="eyebrow light">DIAGNOSIS RESULT</div>
+        <p class="result-intro">あなたの会社の顧客継続タイプは…</p>
+        <div class="level" id="result-level"></div>
+        <h1 id="result-type"></h1>
+        <div class="score-box">
+          <span>顧客継続力スコア</span>
+          <strong><span id="result-score"></span><small> / 40</small></strong>
+        </div>
+      </div>
+
+      <div class="content-card result-card">
+        <div class="section-kicker">5 BUSINESS INDICATORS</div>
+        <h3>5つの経営指標</h3>
+        <p class="chart-note">各指標は2問の合計で、8点満点です。</p>
+        <div class="radar-wrap">
+          <svg id="radar" viewBox="0 0 360 320" role="img" aria-label="5つの経営指標レーダーチャート"></svg>
+        </div>
+        <div id="axis-scores" class="axis-scores"></div>
+      </div>
+
+      <div class="content-card result-copy">
+        <div class="why-label">WHY CUSTOMERS LEAVE</div>
+        <h2 id="why-title"></h2>
+        <div id="result-body"></div>
+      </div>
+
+      <div class="content-card growth-card">
+        <div class="section-kicker">NEXT IMPROVEMENT</div>
+        <h3>あなたの伸びしろ</h3>
+        <div id="growth-copy"></div>
+        <div class="first-step">
+          <span>まず取り組むこと</span>
+          <strong id="first-step"></strong>
+        </div>
+      </div>
+
+      <div class="content-card common-message">
+        <div class="section-kicker">ONE MORE PERSPECTIVE</div>
+        <h2>新規顧客を探す前に、<br>今いる顧客を見てみてください。</h2>
+        <p>あなたの会社には、すでに<br><strong>あなたを信頼してくれているお客様</strong><br>という大きな資産があります。</p>
+        <div class="relationship-shift">
+          <span>売って終わり</span>
+          <b>→</b>
+          <strong>困ったときに相談される関係</strong>
+        </div>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-badge">NEXT STEP｜90分オンライン特別講座</div>
+        <div class="eyebrow">診断結果を見て「では、どう改善すればいい？」と思った方へ</div>
+        <h2>顧客が離れない会社には、<br><strong>理由があります。</strong></h2>
+        <p class="lecture-lead">新規集客だけに頼らず、<br class="sp-only">継続率・LTV・紹介を高める方法を90分で整理します。</p>
+
+        <div class="lecture-points">
+          <div><span>01</span><b>顧客が離れにくくなる仕組み</b></div>
+          <div><span>02</span><b>継続率が上がる考え方</b></div>
+          <div><span>03</span><b>LTVが高まる関係設計</b></div>
+          <div><span>04</span><b>紹介が生まれる理由</b></div>
+        </div>
+
+        <p class="lecture-note">YourLifeが15年間の試行錯誤で作ってきた仕組みを、他業種でも応用できる形でお伝えします。</p>
+
+        <a class="primary-btn link-btn" id="lecture-link" href="https://utage-system.com/p/qlfkqOFaLATZ" target="_blank" rel="noopener">90分オンライン特別講座を見る</a>
+        <div class="free-note">9月限定開催｜参加無料</div>
+      </div>
+
+      <div class="restart-wrap">
+        <button class="secondary-btn" id="restart-btn">もう一度診断する</button>
+      </div>
+
+      <footer>本診断は、現在の事業・顧客との関係性を整理するための簡易セルフチェックです。診断結果は事業成果や顧客継続を保証するものではありません。</footer>
     </div>
-
-    <div class="lecture-card">
-      <img class="cta-banner" src="cta-banner.png" alt="顧客が離れる理由が分かったら、次はLTVを高める方法を。90分オンライン特別講座" />
-      <div class="eyebrow">SPECIAL 01｜90分オンライン特別講座</div>
-      <p class="pre-head">診断結果を踏まえて、次の一手を知りたい方へ</p>
-      <h2>新規集客だけに頼らず、<br>既存顧客から売上を伸ばす方法があります。</h2>
-      <p>顧客との関係を長くするだけでは、LTVは大きくなりません。<br><br>もう一つ重要なのが、<strong>お客様自身の「使えるお金」を増やすこと。</strong></p>
-      <div class="lecture-title">新規集客だけに頼らず売上を伸ばす！<br><strong>既存顧客の「使えるお金」を増やし、LTVを高める方法</strong></div>
-      <p class="lecture-note">資産形成コンサル歴15年、顧客継続率92％の吉永知則が、既存顧客との関係を活かしながら、提供価値とLTVを広げる考え方を解説します。</p>
-      <a class="primary-btn link-btn" id="lecture-link" href="#" target="_blank" rel="noopener">90分オンライン特別講座を見る</a>
-      <div class="free-note">イベント参加者限定｜無料</div>
-    </div>
-
-    <div class="restart-wrap">
-      <button class="secondary-btn" id="restart-btn">もう一度診断する</button>
-    </div>
-
-    <footer>本診断は、現在の事業・顧客との関係性を整理するための簡易セルフチェックです。診断結果は事業成果や顧客継続を保証するものではありません。</footer>
-  </div>
-</section>
+  </section>
 
 </main>
 <script src="script.js"></script>
