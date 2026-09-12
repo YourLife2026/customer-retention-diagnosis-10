@@ -352,15 +352,22 @@ footer{font-size:.72rem;padding:12px 8px 30px;text-align:center;line-height:1.7}
   width:100%;
   margin:18px auto 14px;
   text-decoration:none;
+  text-align:center;
 }
 
 #lecture-banner-link img{
   display:block !important;
   width:100% !important;
+  max-width:560px !important;
   height:auto !important;
-  max-width:100% !important;
   margin:0 auto;
   border-radius:16px;
   visibility:visible !important;
   opacity:1 !important;
+}
+
+@media(max-width:600px){
+  #lecture-banner-link img{
+    max-width:100% !important;
+  }
 }
