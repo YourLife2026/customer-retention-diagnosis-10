@@ -1,4 +1,4 @@
-const LECTURE_URL = "#"; // 採用後、90分講座URLに差し替え
+const LECTURE_URL = "https://utage-system.com/p/qlfkqOFaLATZ";
 
 const questions = [
   {
@@ -116,7 +116,10 @@ document.querySelectorAll("[data-next]").forEach(btn=>{
 });
 
 document.querySelector("[data-start]").addEventListener("click",()=>{
-  current=0;scores=[];renderQuestion();show("screen-question");
+  current=0;
+  scores=[];
+  renderQuestion();
+  show("screen-question");
 });
 
 function renderQuestion(){
@@ -132,8 +135,12 @@ document.querySelectorAll(".answers button").forEach(btn=>{
   btn.addEventListener("click",()=>{
     scores[current]=Number(btn.dataset.score);
     current++;
-    if(current<questions.length){renderQuestion();}
-    else{startAnalysis();}
+    if(current<questions.length){
+      renderQuestion();
+      window.scrollTo({top:0,behavior:"smooth"});
+    }else{
+      startAnalysis();
+    }
   });
 });
 
@@ -141,8 +148,8 @@ function startAnalysis(){
   show("screen-analyzing");
   const rows=[...document.querySelectorAll("#analysis-list div")];
   rows.forEach(r=>r.classList.remove("done"));
-  rows.forEach((r,i)=>setTimeout(()=>r.classList.add("done"),450+i*300));
-  setTimeout(renderResult,2200);
+  rows.forEach((r,i)=>setTimeout(()=>r.classList.add("done"),420+i*280));
+  setTimeout(renderResult,2050);
 }
 
 function axisTotals(){
@@ -201,15 +208,17 @@ function drawRadar(values){
   for(let i=0;i<n;i++){
     const [x,y]=point(i,r);
     const line=document.createElementNS("http://www.w3.org/2000/svg","line");
-    line.setAttribute("x1",cx);line.setAttribute("y1",cy);
-    line.setAttribute("x2",x);line.setAttribute("y2",y);
+    line.setAttribute("x1",cx);
+    line.setAttribute("y1",cy);
+    line.setAttribute("x2",x);
+    line.setAttribute("y2",y);
     line.setAttribute("stroke","#E4DED0");
     svg.appendChild(line);
   }
 
   const data=document.createElementNS("http://www.w3.org/2000/svg","polygon");
   data.setAttribute("points",values.map((v,i)=>point(i,r*v/8)).join(" "));
-  data.setAttribute("fill","rgba(184,154,94,.22)");
+  data.setAttribute("fill","rgba(184,154,94,.20)");
   data.setAttribute("stroke","#B89A5E");
   data.setAttribute("stroke-width","3");
   svg.appendChild(data);
@@ -217,7 +226,8 @@ function drawRadar(values){
   labels.forEach((lab,i)=>{
     const[x,y]=point(i,r+34);
     const t=document.createElementNS("http://www.w3.org/2000/svg","text");
-    t.setAttribute("x",x);t.setAttribute("y",y);
+    t.setAttribute("x",x);
+    t.setAttribute("y",y);
     t.setAttribute("text-anchor","middle");
     t.setAttribute("dominant-baseline","middle");
     t.setAttribute("font-size","12");
@@ -229,5 +239,7 @@ function drawRadar(values){
 }
 
 document.getElementById("restart-btn").addEventListener("click",()=>{
-  current=0;scores=[];show("screen-top");
+  current=0;
+  scores=[];
+  show("screen-top");
 });
