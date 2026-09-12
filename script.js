@@ -243,3 +243,12 @@ document.getElementById("restart-btn").addEventListener("click",()=>{
   scores=[];
   show("screen-top");
 });
+
+
+// CTA: always send the user to the UTAGE webinar page.
+document.addEventListener("click", function (event) {
+  const link = event.target.closest("#lecture-link");
+  if (!link) return;
+  event.preventDefault();
+  window.location.assign(LECTURE_URL);
+});
