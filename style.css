@@ -346,18 +346,21 @@ footer{font-size:.72rem;padding:12px 8px 30px;text-align:center;line-height:1.7}
   .question-card{width:min(100%,720px)}
   .hero-banner{width:100%;height:auto}
 }
-/* 最終CTAバナー表示調整 */
-#lecture-banner-link {
-  display: block;
-  width: 100%;
-  margin: 18px 0 14px;
+/* 最終CTAバナー */
+#lecture-banner-link{
+  display:block;
+  width:100%;
+  margin:18px auto 14px;
+  text-decoration:none;
 }
 
-.cta-banner {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto !important;
-  object-fit: contain !important;
-  border-radius: 18px;
+#lecture-banner-link img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:100% !important;
+  margin:0 auto;
+  border-radius:16px;
+  visibility:visible !important;
+  opacity:1 !important;
 }
